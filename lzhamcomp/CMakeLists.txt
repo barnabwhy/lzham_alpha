@@ -37,6 +37,10 @@ set(SRC_LIST
 	lzham_pthreads_threading.h
 	lzham_threading.h)
 
+if (WIN32)
+	list (APPEND SRC_LIST lzham_win32_threading.cpp)
+endif ()
+
 # -fno-strict-aliasing is *required* to compile LZHAM
 set(GCC_COMPILE_FLAGS "-fno-strict-aliasing -D_LARGEFILE64_SOURCE=1 -D_FILE_OFFSET_BITS=64")
 
