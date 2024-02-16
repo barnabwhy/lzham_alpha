@@ -21,6 +21,7 @@ namespace lzham
       typedef signed __int64        int64;
    #endif
 
+#ifndef WIN32
    const uint8  UINT8_MIN  = 0;
    const uint8  UINT8_MAX  = 0xFFU;
    const uint16 UINT16_MIN = 0;
@@ -38,6 +39,7 @@ namespace lzham
    const int32 INT32_MAX = 2147483647;
    const int64 INT64_MIN = (int64)0x8000000000000000ULL; //(-9223372036854775807i64 - 1);
    const int64 INT64_MAX = (int64)0x7FFFFFFFFFFFFFFFULL; //9223372036854775807i64;
+#endif
 
 #if LZHAM_64BIT_POINTERS
    typedef uint64 uint_ptr;
